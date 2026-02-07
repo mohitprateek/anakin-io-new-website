@@ -51,8 +51,6 @@ const methods = [
 export default function WhyDifferent() {
   return (
     <section className="py-28 sm:py-36 relative" id="why-different">
-      {/* Subtle gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -82,7 +80,7 @@ export default function WhyDifferent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass-card rounded-xl p-6 text-center hover:bg-card-hover transition-all group"
+              className="solid-card rounded-xl p-6 text-center hover:bg-card-hover transition-colors group"
             >
               <stat.icon
                 size={24}
@@ -115,7 +113,7 @@ export default function WhyDifferent() {
             {methods.map((method) => (
               <div
                 key={method.name}
-                className="glass-card rounded-xl p-6 text-center hover:bg-card-hover transition-all"
+                className="solid-card rounded-xl p-6 text-center hover:bg-card-hover transition-colors"
               >
                 <method.icon
                   size={20}

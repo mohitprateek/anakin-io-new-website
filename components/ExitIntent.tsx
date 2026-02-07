@@ -82,9 +82,9 @@ export default function ExitIntent() {
                   <input
                     type="email"
                     placeholder="you@company.com"
-                    className="flex-1 rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-colors"
+                    className="flex-1 rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-colors"
                   />
-                  <button className="flex items-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-medium text-white hover:bg-accent-hover transition-all glow-blue whitespace-nowrap">
+                  <button className="flex items-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-medium text-white hover:bg-accent-hover transition-colors whitespace-nowrap">
                     Get API Key
                     <ArrowRight size={14} />
                   </button>

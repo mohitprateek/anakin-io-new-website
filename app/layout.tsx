@@ -41,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="antialiased dot-grid">{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

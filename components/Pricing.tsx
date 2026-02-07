@@ -116,8 +116,8 @@ export default function Pricing() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`rounded-xl p-6 flex flex-col ${
                 plan.highlighted
-                  ? "border-2 border-accent bg-accent/5 relative"
-                  : "glass-card"
+                  ? "border border-accent/50 bg-accent/5 relative"
+                  : "solid-card"
               }`}
             >
               {plan.highlighted && (
@@ -169,7 +169,7 @@ export default function Pricing() {
                 href="/get-started"
                 className={`flex items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-medium transition-all ${
                   plan.highlighted
-                    ? "bg-accent text-white hover:bg-accent-hover glow-blue"
+                    ? "bg-accent text-white hover:bg-accent-hover"
                     : "border border-border text-muted hover:text-foreground hover:border-muted-foreground"
                 }`}
               >

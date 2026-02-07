@@ -62,7 +62,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass-card rounded-xl p-6 flex flex-col justify-between hover:bg-card-hover transition-all"
+              className="solid-card rounded-xl p-6 flex flex-col justify-between hover:bg-card-hover transition-colors"
             >
               <div>
                 <Quote size={20} className="text-accent mb-4" />
@@ -93,7 +93,7 @@ export default function Testimonials() {
           {resultStats.map((stat, i) => (
             <div
               key={i}
-              className="text-center glass-card rounded-xl p-5"
+              className="text-center solid-card rounded-xl p-5"
             >
               <div className="text-2xl sm:text-3xl font-bold font-[family-name:var(--font-jetbrains)] text-foreground mb-1">
                 {stat.value}

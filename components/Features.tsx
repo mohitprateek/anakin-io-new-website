@@ -82,7 +82,7 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="glass-card rounded-2xl p-8 hover:bg-card-hover transition-all group"
+              className="solid-card rounded-2xl p-8 hover:bg-card-hover transition-colors group"
             >
               <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
                 <feature.icon size={24} className="text-accent" />

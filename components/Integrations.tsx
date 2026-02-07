@@ -75,7 +75,7 @@ function LogoPill({ item }: { item: LogoItem }) {
 
 function IntegrationCard({ item }: { item: LogoItem }) {
   return (
-    <div className="glass-card rounded-xl p-5 hover:bg-card-hover transition-all group flex items-center gap-3">
+    <div className="solid-card rounded-xl p-5 hover:bg-card-hover transition-colors group flex items-center gap-3">
       <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-white/10 transition-colors">
         {item.slug ? (
           <Image

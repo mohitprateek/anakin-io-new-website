@@ -8,10 +8,6 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative pt-36 pb-28 sm:pt-44 sm:pb-36" id="hero">
-      {/* Gradient orb background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[700px] bg-accent/5 rounded-full blur-[140px]" />
-      </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
@@ -49,8 +45,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-8"
           >
-            Scrape the{" "}
-            <span className="gradient-text">Unscrapable</span>
+            Scrape the Unscrapable
           </motion.h1>
 
           {/* Subheadline -- concrete and specific */}
@@ -74,7 +69,7 @@ export default function Hero() {
           >
             <Link
               href="/get-started"
-              className="group inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-4 text-base font-medium text-white hover:bg-accent-hover transition-all glow-blue"
+              className="group inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-4 text-base font-medium text-white hover:bg-accent-hover transition-colors"
             >
               Get Free API Key
               <ArrowRight

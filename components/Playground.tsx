@@ -177,7 +177,7 @@ export default function Playground() {
                             Sign up free to see the full response
                           </div>
                           <div className="flex flex-col sm:flex-row items-center gap-3">
-                            <button className="flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-medium text-white hover:bg-accent-hover transition-all glow-blue">
+                            <button className="flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-medium text-white hover:bg-accent-hover transition-colors">
                               Get Free API Key
                               <ArrowRight size={14} />
                             </button>
