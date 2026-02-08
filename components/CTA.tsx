@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section className="py-28 sm:py-36 relative">
+    <section className="py-20 sm:py-24 relative">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-surface pointer-events-none" />
 

@@ -50,7 +50,7 @@ const methods = [
 
 export default function WhyDifferent() {
   return (
-    <section className="py-28 sm:py-36 relative" id="why-different">
+    <section className="py-20 sm:py-24 relative" id="why-different">
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div

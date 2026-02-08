@@ -104,7 +104,7 @@ function IntegrationCard({ item }: { item: LogoItem }) {
 
 export default function Integrations() {
   return (
-    <section className="py-28 sm:py-36" id="integrations">
+    <section className="py-20 sm:py-24" id="integrations">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
