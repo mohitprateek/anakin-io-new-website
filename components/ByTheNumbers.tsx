@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const numbers = [
   { value: "10M+", label: "API requests processed daily", detail: "And growing" },
   { value: "99.5%", label: "Data accuracy rate", detail: "ML + Human QA pipeline" },
@@ -15,29 +11,19 @@ export default function ByTheNumbers() {
   return (
     <section className="py-20 sm:py-24 section-alt">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
             Anakin by the numbers
           </h2>
           <p className="text-muted">
             The engine behind mission-critical data for global enterprises.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-px bg-border/50 rounded-2xl overflow-hidden">
-          {numbers.map((item, i) => (
-            <motion.div
+          {numbers.map((item) => (
+            <div
               key={item.label}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: i * 0.05 }}
               className="bg-card p-8 sm:p-10 text-center"
             >
               <div className="text-4xl sm:text-5xl font-bold font-[family-name:var(--font-jetbrains)] text-foreground mb-2">
@@ -49,7 +35,7 @@ export default function ByTheNumbers() {
               <div className="text-xs text-muted-foreground">
                 {item.detail}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

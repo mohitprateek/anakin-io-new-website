@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Check, ArrowRight, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
@@ -64,13 +63,7 @@ export default function Pricing() {
   return (
     <section className="py-20 sm:py-24" id="pricing">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
             Simple, transparent pricing
           </h2>
@@ -104,16 +97,12 @@ export default function Pricing() {
               <span className="text-accent text-xs font-medium">Save 20%</span>
             </span>
           </div>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {plans.map((plan, i) => (
-            <motion.div
+          {plans.map((plan) => (
+            <div
               key={plan.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`rounded-xl p-6 flex flex-col ${
                 plan.highlighted
                   ? "border border-accent/50 bg-accent/5 relative"
@@ -176,18 +165,12 @@ export default function Pricing() {
                 {plan.cta}
                 <ArrowRight size={14} />
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Guarantee Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 flex items-center justify-center"
-        >
+        <div className="mt-12 flex items-center justify-center">
           <div className="inline-flex items-center gap-3 rounded-xl border border-emerald-500/20 bg-emerald-500/5 px-6 py-4">
             <ShieldCheck size={24} className="text-emerald-400 flex-shrink-0" />
             <div>
@@ -199,7 +182,7 @@ export default function Pricing() {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

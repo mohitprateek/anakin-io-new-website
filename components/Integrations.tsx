@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 type LogoItem = {
@@ -98,29 +95,17 @@ export default function Integrations() {
   return (
     <section className="py-20 sm:py-24" id="integrations">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
             Fits your stack. Powers your workflows.
           </h2>
           <p className="text-lg text-muted max-w-xl mx-auto">
             SDKs for every language. Integrations with the tools you already use.
           </p>
-        </motion.div>
+        </div>
 
         {/* SDKs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-10"
-        >
+        <div className="mb-10">
           <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-6 text-center">
             SDKs
           </h3>
@@ -129,16 +114,10 @@ export default function Integrations() {
               <LogoPill key={item.name} item={item} />
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Delivery Targets */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="mb-14"
-        >
+        <div className="mb-14">
           <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-6 text-center">
             Delivery Targets
           </h3>
@@ -147,15 +126,10 @@ export default function Integrations() {
               <LogoPill key={item.name} item={item} />
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Partner integrations */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
+        <div>
           <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-6 text-center">
             Integrations
           </h3>
@@ -164,7 +138,7 @@ export default function Integrations() {
               <IntegrationCard key={item.name} item={item} />
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

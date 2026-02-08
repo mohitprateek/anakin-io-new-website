@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -11,12 +8,7 @@ export default function CTA() {
       <div className="absolute inset-0 bg-surface pointer-events-none" />
 
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+        <div>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
             Start scraping in 30 seconds
           </h2>
@@ -47,7 +39,7 @@ export default function CTA() {
           <p className="text-xs text-muted-foreground mt-6">
             Free tier available · No credit card required · Cancel anytime
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

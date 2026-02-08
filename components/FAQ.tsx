@@ -47,17 +47,11 @@ const faqs = [
   },
 ];
 
-function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
+function FAQItem({ faq }: { faq: (typeof faqs)[0] }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3, delay: index * 0.05 }}
-      className="border-b border-border/50"
-    >
+    <div className="border-b border-border/50">
       <button
         onClick={() => setOpen(!open)}
         className="flex items-center justify-between w-full py-5 text-left group"
@@ -87,32 +81,26 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </div>
   );
 }
 
 export default function FAQ() {
   return (
-    <section className="py-20 sm:py-24" id="faq">
+    <section className="py-20 sm:py-24 section-alt" id="faq">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
             Frequently asked questions
           </h2>
           <p className="text-muted">
             Everything you need to know about Anakin.
           </p>
-        </motion.div>
+        </div>
 
         <div>
           {faqs.map((faq, i) => (
-            <FAQItem key={i} faq={faq} index={i} />
+            <FAQItem key={i} faq={faq} />
           ))}
         </div>
       </div>

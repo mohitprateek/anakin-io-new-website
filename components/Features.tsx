@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import {
   Globe,
   Smartphone,
@@ -59,29 +56,19 @@ export default function Features() {
   return (
     <section className="py-20 sm:py-24" id="features">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-20"
-        >
+        <div className="text-center mb-20">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
             Everything you need to scrape at scale
           </h2>
           <p className="text-lg text-muted max-w-xl mx-auto">
             Enterprise-grade capabilities, developer-friendly API.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {features.map((feature, i) => (
-            <motion.div
+          {features.map((feature) => (
+            <div
               key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
               className="solid-card rounded-2xl p-8 hover:bg-card-hover transition-colors group"
             >
               <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
@@ -94,7 +81,7 @@ export default function Features() {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {feature.detail}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

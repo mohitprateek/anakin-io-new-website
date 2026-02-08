@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Copy, Check } from "lucide-react";
 
 const tabs = [
@@ -82,13 +81,7 @@ export default function CodeDemo() {
   return (
     <section className="py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
             It really is this simple
           </h2>
@@ -96,15 +89,9 @@ export default function CodeDemo() {
             Three lines of code. Any website. Structured data back in under a
             second.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto"
-        >
+        <div className="max-w-3xl mx-auto">
           <div className="rounded-xl border border-border bg-[#0c0c0c] overflow-hidden shadow-2xl">
             {/* Tab bar */}
             <div className="flex items-center justify-between border-b border-border/50 bg-[#0a0a0a]">
@@ -139,7 +126,7 @@ export default function CodeDemo() {
               </pre>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Clock, Globe, Zap, Target, Monitor, Wifi, Camera } from "lucide-react";
 
 const stats = [
@@ -50,16 +47,10 @@ const methods = [
 
 export default function WhyDifferent() {
   return (
-    <section className="py-20 sm:py-24 relative" id="why-different">
+    <section className="py-20 sm:py-24 section-alt relative" id="why-different">
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
             Born from 4 years of scraping the impossible
           </h2>
@@ -69,17 +60,13 @@ export default function WhyDifferent() {
             extracting data from apps that block everyone else — for the
             world&apos;s largest companies.
           </p>
-        </motion.div>
+        </div>
 
         {/* Stat cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16">
-          {stats.map((stat, i) => (
-            <motion.div
+          {stats.map((stat) => (
+            <div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
               className="solid-card rounded-xl p-6 text-center hover:bg-card-hover transition-colors group"
             >
               <stat.icon
@@ -95,17 +82,12 @@ export default function WhyDifferent() {
               <div className="text-xs text-muted-foreground">
                 {stat.description}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Scraping methods */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
+        <div>
           <h3 className="text-center text-sm uppercase tracking-widest text-muted-foreground mb-8">
             Three parallel scraping methods for 100% data coverage
           </h3>
@@ -126,7 +108,7 @@ export default function WhyDifferent() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
