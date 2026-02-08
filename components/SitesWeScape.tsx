@@ -48,7 +48,7 @@ function LogoPill({ brand }: { brand: Brand }) {
   return (
     <div className="flex-shrink-0 flex items-center gap-2.5 rounded-lg border border-border bg-card px-5 py-3 logo-grayscale hover:border-muted-foreground transition-colors mx-2">
       {brand.slug ? (
-        <Image src={`https://cdn.simpleicons.org/${brand.slug}/white`} alt={brand.name} width={18} height={18} className="flex-shrink-0" unoptimized />
+        <Image src={`https://cdn.simpleicons.org/${brand.slug}/_1a1a1a`} alt={brand.name} width={18} height={18} className="flex-shrink-0" unoptimized />
       ) : (
         <span className="w-[18px] h-[18px] rounded bg-white/10 flex items-center justify-center text-[10px] font-bold text-muted-foreground flex-shrink-0">{brand.name.charAt(0)}</span>
       )}
@@ -74,7 +74,7 @@ export default function SitesWeScape() {
     <section className="py-20 sm:py-24 overflow-hidden section-alt">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-12">
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight mb-3">
             If it&apos;s on the web, we can scrape it.
           </h2>
           <p className="text-muted">

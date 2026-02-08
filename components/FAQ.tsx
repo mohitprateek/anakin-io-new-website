@@ -90,7 +90,7 @@ export default function FAQ() {
     <section className="py-20 sm:py-24 section-alt" id="faq">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
+          <h2 className="font-heading text-4xl sm:text-5xl font-bold tracking-tight mb-5">
             Frequently asked questions
           </h2>
           <p className="text-muted">

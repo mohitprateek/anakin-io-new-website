@@ -4,12 +4,9 @@ import Link from "next/link";
 export default function CTA() {
   return (
     <section className="py-20 sm:py-24 relative">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-surface pointer-events-none" />
-
-      <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <div>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
+          <h2 className="font-heading text-4xl sm:text-5xl font-bold tracking-tight mb-6">
             Start scraping in 30 seconds
           </h2>
           <p className="text-lg text-muted max-w-xl mx-auto mb-10">

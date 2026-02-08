@@ -5,7 +5,7 @@ type LogoItem = {
   icon: string;
 };
 
-const si = (slug: string) => `https://cdn.simpleicons.org/${slug}/white`;
+const si = (slug: string) => `https://cdn.simpleicons.org/${slug}/_1a1a1a`;
 const local = (name: string) => `/logos/${name}.png`;
 
 const sdks: LogoItem[] = [
@@ -71,7 +71,7 @@ export default function Integrations() {
     <section className="py-20 sm:py-24" id="integrations">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight mb-3">
             Fits your stack. Powers your workflows.
           </h2>
           <p className="text-muted">

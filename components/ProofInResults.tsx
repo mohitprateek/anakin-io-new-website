@@ -27,7 +27,7 @@ export default function ProofInResults() {
           <p className="text-xs font-[family-name:var(--font-jetbrains)] uppercase tracking-[0.25em] text-muted-foreground mb-4">
             Enterprise Results
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight">
             The proof is in the results
           </h2>
         </div>
@@ -39,7 +39,7 @@ export default function ProofInResults() {
                 <div className="text-5xl sm:text-6xl font-bold font-[family-name:var(--font-jetbrains)] text-foreground leading-none">
                   {result.metric}
                 </div>
-                <div className="text-sm font-medium text-accent mt-2">
+                <div className="text-sm font-medium text-blue-700 mt-2">
                   {result.description}
                 </div>
               </div>

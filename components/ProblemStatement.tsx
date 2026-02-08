@@ -7,7 +7,7 @@ export default function ProblemStatement() {
             Why Anakin Exists
           </p>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.2] tracking-tight mb-8">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.2] tracking-tight mb-8">
             Traditional scrapers break.{" "}
             <span className="text-muted-foreground">
               Every week. You fix one, another breaks. Your team spends more

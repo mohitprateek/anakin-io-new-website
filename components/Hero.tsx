@@ -31,7 +31,7 @@ export default function Hero() {
             Backed by Y Combinator
           </div>
 
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-6">
+          <h1 className="font-heading text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-6">
             Scrape the Unscrapable
           </h1>
 

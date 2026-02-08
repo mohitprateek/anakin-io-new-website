@@ -27,7 +27,7 @@ export default function Navbar() {
               alt="Anakin"
               width={32}
               height={32}
-              className="invert"
+              className=""
             />
             <span className="text-lg font-bold tracking-tight">anakin</span>
           </Link>
