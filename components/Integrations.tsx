@@ -81,7 +81,7 @@ export default function Integrations() {
 
         {/* SDKs */}
         <div className="mb-10">
-          <p className="text-[11px] uppercase tracking-widest text-muted-foreground mb-4 text-center">
+          <p className="label-caps text-muted-foreground mb-4 text-center">
             SDKs
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 max-w-lg mx-auto">
@@ -93,7 +93,7 @@ export default function Integrations() {
 
         {/* Delivery Targets */}
         <div className="mb-14">
-          <p className="text-[11px] uppercase tracking-widest text-muted-foreground mb-4 text-center">
+          <p className="label-caps text-muted-foreground mb-4 text-center">
             Delivery Targets
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 max-w-2xl mx-auto">
@@ -105,7 +105,7 @@ export default function Integrations() {
 
         {/* Partner integrations -- big logo grid like ElevenLabs */}
         <div>
-          <p className="text-[11px] uppercase tracking-widest text-muted-foreground mb-4 text-center">
+          <p className="label-caps text-muted-foreground mb-4 text-center">
             Integrations
           </p>
           <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-10 gap-3">

@@ -3,7 +3,7 @@ export default function ProblemStatement() {
     <section className="py-24 sm:py-32">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl">
-          <p className="text-xs font-[family-name:var(--font-jetbrains)] uppercase tracking-[0.25em] text-muted-foreground mb-8">
+          <p className="label-caps text-muted-foreground mb-8">
             Why Anakin Exists
           </p>
 
@@ -22,7 +22,7 @@ export default function ProblemStatement() {
             to automated data collection.
           </p>
 
-          <div className="border-l-2 border-accent pl-6">
+          <div className="border-l-2 border-data pl-6">
             <p className="text-lg sm:text-xl font-medium text-foreground leading-relaxed">
               We built Anakin for this problem. Four years of scraping the
               hardest websites for the world&apos;s largest companies — distilled

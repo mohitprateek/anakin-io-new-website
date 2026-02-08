@@ -16,7 +16,7 @@ export default function Hero() {
     <section className="pt-32 pb-20 sm:pt-40 sm:pb-24" id="hero">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
-          <p className="text-xs font-[family-name:var(--font-jetbrains)] uppercase tracking-[0.25em] text-muted-foreground mb-6">
+          <p className="label-caps text-muted-foreground mb-6">
             Web Scraping API
           </p>
 
@@ -35,7 +35,7 @@ export default function Hero() {
             Scrape the Unscrapable
           </h1>
 
-          <p className="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted max-w-xl mx-auto mb-10 leading-relaxed">
             Extract structured data from any website with a single API call.
             We handle JavaScript rendering, anti-bot bypass, and proxy
             rotation — so you don&apos;t have to.

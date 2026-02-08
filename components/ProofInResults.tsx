@@ -24,7 +24,7 @@ export default function ProofInResults() {
     <section className="py-20 sm:py-24 section-alt">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mb-14">
-          <p className="text-xs font-[family-name:var(--font-jetbrains)] uppercase tracking-[0.25em] text-muted-foreground mb-4">
+          <p className="label-caps text-muted-foreground mb-4">
             Enterprise Results
           </p>
           <h2 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight">
@@ -36,10 +36,10 @@ export default function ProofInResults() {
           {results.map((result, i) => (
             <div key={i} className="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-6 sm:gap-10 py-10 first:pt-0 last:pb-0">
               <div>
-                <div className="text-5xl sm:text-6xl font-bold font-[family-name:var(--font-jetbrains)] text-foreground leading-none">
+                <div className="text-5xl sm:text-6xl font-bold font-[family-name:var(--font-jetbrains)] text-data leading-none">
                   {result.metric}
                 </div>
-                <div className="text-sm font-medium text-blue-700 mt-2">
+                <div className="text-sm font-medium text-data mt-2">
                   {result.description}
                 </div>
               </div>

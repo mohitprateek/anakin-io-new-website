@@ -11,6 +11,7 @@
   --color-accent: #1a1a1a;
   --color-accent-hover: #333333;
   --color-surface: #ece6df;
+  --color-data: #2d6a4f;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "DM Serif Display", "Georgia", serif;
@@ -24,6 +25,19 @@ body {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans);
+}
+
+/* Paper noise texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
 }
 
 /* Scrollbar */
@@ -51,15 +65,22 @@ body {
 }
 .animate-blink { animation: blink 1s step-end infinite; }
 
-/* Solid card -- light theme */
+/* Solid card -- borderless, tonal shift only */
 .solid-card {
   background-color: var(--color-card);
-  border: 1px solid var(--color-border);
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
-/* Alt section background */
+/* Atmospheric alt section -- gradient transitions */
 .section-alt {
-  background-color: var(--color-surface);
+  background: linear-gradient(
+    to bottom,
+    var(--color-background),
+    var(--color-surface) 15%,
+    var(--color-surface) 85%,
+    var(--color-background)
+  );
 }
 
 /* Discord pulse */
@@ -70,7 +91,7 @@ body {
 }
 .animate-pulse-ring { animation: pulse-ring 3s ease-in-out infinite; }
 
-/* Logo grayscale -- adjusted for light theme */
+/* Logo grayscale */
 .logo-grayscale {
   filter: grayscale(100%) brightness(1.2);
   opacity: 0.35;
@@ -81,7 +102,15 @@ body {
   opacity: 1;
 }
 
-/* Serif heading utility */
+/* Serif heading */
 .font-heading {
   font-family: var(--font-serif);
+}
+
+/* Museum label typography */
+.label-caps {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
 }

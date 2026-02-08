@@ -71,8 +71,8 @@ export default function Features() {
               key={feature.title}
               className="solid-card rounded-2xl p-8 hover:bg-card-hover transition-colors group"
             >
-              <div className="w-12 h-12 rounded-xl bg-foreground/5 flex items-center justify-center mb-5 group-hover:bg-foreground/10 transition-colors">
-                <feature.icon size={24} className="text-accent" />
+              <div className="w-12 h-12 rounded-xl bg-data/10 flex items-center justify-center mb-5 group-hover:bg-data/15 transition-colors">
+                <feature.icon size={24} className="text-data" />
               </div>
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted leading-relaxed mb-2">

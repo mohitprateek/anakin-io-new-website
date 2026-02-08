@@ -26,7 +26,7 @@ export default function ByTheNumbers() {
               key={item.label}
               className="bg-card p-8 sm:p-10 text-center"
             >
-              <div className="text-4xl sm:text-5xl font-bold font-[family-name:var(--font-jetbrains)] text-foreground mb-2">
+              <div className="text-4xl sm:text-5xl font-bold font-[family-name:var(--font-jetbrains)] text-data mb-2">
                 {item.value}
               </div>
               <div className="text-sm font-medium text-foreground mb-1">

@@ -13,7 +13,7 @@ export default function TrustedBy() {
   return (
     <section className="py-12 sm:py-14 border-y border-border/50 section-alt">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-xs uppercase tracking-widest text-muted-foreground mb-6">
+        <p className="label-caps text-muted-foreground mb-6">
           Trusted by developers and enterprises across 20+ countries
         </p>
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">

@@ -147,7 +147,7 @@ export default function Pricing() {
                   >
                     <Check
                       size={16}
-                      className="text-accent flex-shrink-0 mt-0.5"
+                      className="text-data flex-shrink-0 mt-0.5"
                     />
                     {feature}
                   </li>
