@@ -2,13 +2,10 @@ import Image from "next/image";
 
 type LogoItem = {
   name: string;
-  icon: string; // URL or local path
-  type?: string;
+  icon: string;
 };
 
-// Helper: Simple Icons CDN URL
 const si = (slug: string) => `https://cdn.simpleicons.org/${slug}/white`;
-// Helper: local favicon
 const local = (name: string) => `/logos/${name}.png`;
 
 const sdks: LogoItem[] = [
@@ -28,65 +25,43 @@ const deliveryTargets: LogoItem[] = [
 ];
 
 const integrations: LogoItem[] = [
-  { name: "Anthropic", icon: si("anthropic"), type: "MCP Server" },
-  { name: "OpenAI", icon: si("openai"), type: "GPT Actions" },
-  { name: "LangChain", icon: si("langchain"), type: "Document Loader" },
-  { name: "LlamaIndex", icon: local("llamaindex"), type: "Data Connector" },
-  { name: "CrewAI", icon: si("crewai"), type: "Scraping Tool" },
-  { name: "Cursor", icon: si("cursor"), type: "MCP Server" },
-  { name: "Windsurf", icon: si("windsurf"), type: "MCP Server" },
-  { name: "Dify", icon: local("dify"), type: "AI Workflows" },
-  { name: "Lindy.ai", icon: local("lindy"), type: "AI Agent" },
-  { name: "Replit", icon: si("replit"), type: "Recommended Tool" },
-  { name: "Zapier", icon: si("zapier"), type: "Automation" },
-  { name: "Make", icon: si("make"), type: "Automation" },
-  { name: "n8n", icon: si("n8n"), type: "Automation" },
-  { name: "Notion", icon: si("notion"), type: "Database Sync" },
-  { name: "Airtable", icon: si("airtable"), type: "Database Sync" },
-  { name: "Supabase", icon: si("supabase"), type: "Database Sync" },
-  { name: "Retool", icon: si("retool"), type: "Internal Tools" },
-  { name: "Slack", icon: local("slack"), type: "Notifications" },
-  { name: "RapidAPI", icon: local("rapidapi"), type: "Marketplace" },
-  { name: "Clay", icon: local("clay"), type: "Enrichment" },
+  { name: "Anthropic", icon: si("anthropic") },
+  { name: "OpenAI", icon: si("openai") },
+  { name: "LangChain", icon: si("langchain") },
+  { name: "LlamaIndex", icon: local("llamaindex") },
+  { name: "CrewAI", icon: si("crewai") },
+  { name: "Cursor", icon: si("cursor") },
+  { name: "Windsurf", icon: si("windsurf") },
+  { name: "Dify", icon: local("dify") },
+  { name: "Lindy.ai", icon: local("lindy") },
+  { name: "Replit", icon: si("replit") },
+  { name: "Zapier", icon: si("zapier") },
+  { name: "Make", icon: si("make") },
+  { name: "n8n", icon: si("n8n") },
+  { name: "Notion", icon: si("notion") },
+  { name: "Airtable", icon: si("airtable") },
+  { name: "Supabase", icon: si("supabase") },
+  { name: "Retool", icon: si("retool") },
+  { name: "Slack", icon: local("slack") },
+  { name: "RapidAPI", icon: local("rapidapi") },
+  { name: "Clay", icon: local("clay") },
 ];
 
-function LogoPill({ item }: { item: LogoItem }) {
+function LogoTile({ item, size = "md" }: { item: LogoItem; size?: "sm" | "md" }) {
+  const iconSize = size === "sm" ? 28 : 36;
   return (
-    <div className="rounded-lg border border-border bg-card px-5 py-3 flex items-center gap-3 hover:bg-card-hover transition-colors">
+    <div className="flex flex-col items-center justify-center gap-2.5 rounded-xl border border-border bg-card p-5 hover:bg-card-hover transition-colors group" title={item.name}>
       <Image
         src={item.icon}
         alt={item.name}
-        width={20}
-        height={20}
-        className="flex-shrink-0"
+        width={iconSize}
+        height={iconSize}
+        className="opacity-60 group-hover:opacity-100 transition-opacity"
         unoptimized
       />
-      <span className="text-sm font-medium text-muted whitespace-nowrap">
+      <span className="text-[11px] text-muted-foreground group-hover:text-muted transition-colors font-medium">
         {item.name}
       </span>
-    </div>
-  );
-}
-
-function IntegrationCard({ item }: { item: LogoItem }) {
-  return (
-    <div className="solid-card rounded-xl p-5 hover:bg-card-hover transition-colors group flex items-center gap-3">
-      <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-white/10 transition-colors">
-        <Image
-          src={item.icon}
-          alt={item.name}
-          width={22}
-          height={22}
-          className="group-hover:opacity-100 transition-opacity"
-          unoptimized
-        />
-      </div>
-      <div className="min-w-0">
-        <div className="font-medium text-sm truncate">{item.name}</div>
-        {item.type && (
-          <div className="text-xs text-muted-foreground">{item.type}</div>
-        )}
-      </div>
     </div>
   );
 }
@@ -95,47 +70,47 @@ export default function Integrations() {
   return (
     <section className="py-20 sm:py-24" id="integrations">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
             Fits your stack. Powers your workflows.
           </h2>
-          <p className="text-lg text-muted max-w-xl mx-auto">
+          <p className="text-muted">
             SDKs for every language. Integrations with the tools you already use.
           </p>
         </div>
 
         {/* SDKs */}
         <div className="mb-10">
-          <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-6 text-center">
+          <p className="text-[11px] uppercase tracking-widest text-muted-foreground mb-4 text-center">
             SDKs
-          </h3>
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 max-w-lg mx-auto">
             {sdks.map((item) => (
-              <LogoPill key={item.name} item={item} />
+              <LogoTile key={item.name} item={item} size="sm" />
             ))}
           </div>
         </div>
 
         {/* Delivery Targets */}
         <div className="mb-14">
-          <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-6 text-center">
+          <p className="text-[11px] uppercase tracking-widest text-muted-foreground mb-4 text-center">
             Delivery Targets
-          </h3>
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 max-w-2xl mx-auto">
             {deliveryTargets.map((item) => (
-              <LogoPill key={item.name} item={item} />
+              <LogoTile key={item.name} item={item} size="sm" />
             ))}
           </div>
         </div>
 
-        {/* Partner integrations */}
+        {/* Partner integrations -- big logo grid like ElevenLabs */}
         <div>
-          <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-6 text-center">
+          <p className="text-[11px] uppercase tracking-widest text-muted-foreground mb-4 text-center">
             Integrations
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+          </p>
+          <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-10 gap-3">
             {integrations.map((item) => (
-              <IntegrationCard key={item.name} item={item} />
+              <LogoTile key={item.name} item={item} />
             ))}
           </div>
         </div>
