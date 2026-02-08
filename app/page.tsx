@@ -4,8 +4,9 @@ import TrustedBy from "@/components/TrustedBy";
 import Playground from "@/components/Playground";
 import SitesWeScape from "@/components/SitesWeScape";
 import CodeDemo from "@/components/CodeDemo";
-import WhyDifferent from "@/components/WhyDifferent";
+import ProblemStatement from "@/components/ProblemStatement";
 import Features from "@/components/Features";
+import ProofInResults from "@/components/ProofInResults";
 import ByTheNumbers from "@/components/ByTheNumbers";
 import Integrations from "@/components/Integrations";
 import Pricing from "@/components/Pricing";
@@ -26,8 +27,9 @@ export default function Home() {
         <Playground />
         <SitesWeScape />
         <CodeDemo />
-        <WhyDifferent />
+        <ProblemStatement />
         <Features />
+        <ProofInResults />
         <ByTheNumbers />
         <Integrations />
         <Pricing />
